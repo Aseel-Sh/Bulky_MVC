@@ -20,8 +20,10 @@
                                 <p class="text-dark text-opacity-75 text-center">As low as: <span>@product.Price100.ToString("c")</span></p>
                             </div>
                         </div>
-                        <div href="#" class="btn btn-primary bg-gradient border-0 form-control">
+                        <div> 
+                            <a asp-action="Details" asp-route-productId="@product.Id" class="btn btn-primary bg-gradient border-0 form-control">
                             Details
+                            </a>
                         </div>
                     </div>
                 </div>
