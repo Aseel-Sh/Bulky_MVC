@@ -31,6 +31,13 @@ builder.Services.AddAuthentication().AddFacebook(options =>
 
 });
 
+builder.Services.AddAuthentication().AddMicrosoftAccount(options =>
+{
+    options.ClientId = builder.Configuration["MicrosoftAuth:AppId"];
+    options.ClientSecret = builder.Configuration["MicrosoftAuth:AppSecret"];
+
+});
+
 builder.Services.AddDistributedMemoryCache();
 builder.Services.AddSession(options => {
     options.IdleTimeout = TimeSpan.FromMinutes(100);
